@@ -12,4 +12,12 @@
   (if (is-good-enough guess x) guess (sqrt-iter (improve guess x) x))
 )
 
-(define (sqrt x) (sqrt-iter 1 x))
+(define (sqrt x) 
+  (cond 
+    ((> x 0) (sqrt-iter 1 x))
+    ((= x 0) 0)
+    ((< x 0) #f)
+  )
+)
+
+(#%provide sqrt)
