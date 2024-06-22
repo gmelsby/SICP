@@ -8,3 +8,5 @@
     (+ (pascals (- row 1) (- col 1)) (pascals (- row 1) col))
   )
 )
+
+(#%provide pascals)
