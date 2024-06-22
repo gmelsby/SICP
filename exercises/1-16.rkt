@@ -15,3 +15,5 @@
     (else (exp-iter b (- n 1) (* b a)))
   )
 )
+
+(#%provide iterative-fast-exp)
