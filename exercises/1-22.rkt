@@ -36,22 +36,21 @@
   1
 )
 
-(define (search-for-primes start end count)
+(define (search-for-primes start count)
   (cond 
-    ((> start end) 
+    ((= count 0) 
       (newline)
       (display "search complete")
-      (newline)
-      (display "found ")
-      (display count)
-      (display " primes")
     )
-    ((= (remainder start 2) 0) (search-for-primes (+ start 1) end count))
+    ((= (remainder start 2) 0) (search-for-primes (+ start 1) count))
     (else 
-      (search-for-primes (+ start 2) end (+ count (timed-prime-test start)))
+      (search-for-primes (+ start 2) (- count (timed-prime-test start)))
     )
   )
 )
 
-(search-for-primes 100 150 0)
+(search-for-primes 1000 3)
+(search-for-primes 10000 3)
+(search-for-primes 100000 3)
+(search-for-primes 1000000 3)
 
