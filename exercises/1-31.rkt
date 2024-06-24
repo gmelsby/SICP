@@ -10,6 +10,13 @@
   (iter a 1)
 )
 
+(define (product-recursive term a next b)
+  (if (> a b)
+    1
+    (* (term a) (product-recursive term (next a) next b))
+  )
+)
+
 (define (factorial n) 
   (product identity 1 inc n)
 )
@@ -27,6 +34,11 @@
 
 (define (cube n) (* n n n))
 (define (product-cubes a b)
-(product cube a inc b))
+  (product cube a inc b)
+)
 
-(#%provide product-cubes factorial pi-approx)
+(define (product-recursive-cubes a b)
+  (product-recursive cube a inc b)
+)
+
+(#%provide product-cubes product-recursive-cubes factorial pi-approx)
