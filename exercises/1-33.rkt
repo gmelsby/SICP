@@ -45,6 +45,8 @@
   (filtered-accumulate + prime? 0 square a inc b)
 )
 
-(filtered-accumulate + (lambda (x) (and (divides? x 2) (divides? x 37))) 0 identity 2 inc 37)
+(define (product-relatively-prime-less-than n)
+  (filtered-accumulate * (lambda (x) (relatively-prime? x n)) 1 identity 1 inc n)
+)
 
-(#%provide sum-of-squares-of-primes relatively-prime?)
+(#%provide sum-of-squares-of-primes relatively-prime? product-relatively-prime-less-than)
