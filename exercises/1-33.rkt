@@ -31,9 +31,20 @@
 
 (define (prime? n) (= n (smallest-divisor n)))
 
+(define (relatively-prime? a b)
+  (if (or (= a 1) (= b 1)) #f
+    (not 
+      (< 0 
+        (filtered-accumulate + (lambda (x) (and (divides? x a) (divides? x b))) 0 identity 2 inc b)
+      )
+    )
+  )
+)
+
 (define (sum-of-squares-of-primes a b)
   (filtered-accumulate + prime? 0 square a inc b)
 )
 
+(filtered-accumulate + (lambda (x) (and (divides? x 2) (divides? x 37))) 0 identity 2 inc 37)
 
-(#%provide sum-of-squares-of-primes)
+(#%provide sum-of-squares-of-primes relatively-prime?)
