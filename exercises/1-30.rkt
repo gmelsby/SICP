@@ -14,4 +14,4 @@
 (define (sum-cubes a b)
 (sum cube a inc b))
 
-(sum-cubes 1 10)
+(#%provide sum-cubes)
