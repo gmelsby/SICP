@@ -7,6 +7,12 @@
 (check-equal? (product-cubes 1 5) 1728000 "product of first 5 cubes is 1728000")
 (check-equal? (product-cubes 4 5) 8000 "sum of first 4 and 5 cubed is 8000")
 
+; recursive product check
+(check-equal? (product-recursive-cubes 1 1) 1 "product of first cube is 1")
+(check-equal? (product-recursive-cubes 1 5) 1728000 "product of first 5 cubes is 1728000")
+(check-equal? (product-recursive-cubes 4 5) 8000 "sum of first 4 and 5 cubed is 8000")
+
+
 ; factorial defined with product check
 (check-equal? (factorial 5) 120 "5! is 120")
 (check-equal? (factorial 10) 3628800 "10! is 3628800")
