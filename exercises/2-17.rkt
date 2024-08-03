@@ -2,7 +2,7 @@
 
 (define (last-pair items) (
   if (null? (cdr items))
-    (car items) 
+    items 
     (last-pair (cdr items))
   
 ))
