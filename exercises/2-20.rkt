@@ -1,7 +1,7 @@
 #lang sicp
 
 (define  (same-parity . ints) 
-  (same-parity-helper ints '())
+  (reverse (same-parity-helper ints '()))
 )
 
 (define (odd? int) (= (modulo int 2) 1))
