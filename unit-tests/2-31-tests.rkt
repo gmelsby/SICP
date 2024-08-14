@@ -1,6 +1,6 @@
 #lang sicp
 
-(#%require rackunit "../exercises/2-30.rkt")
+(#%require rackunit "../exercises/2-31.rkt")
 
 
 (check-equal? (square-tree
