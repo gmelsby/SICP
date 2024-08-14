@@ -14,6 +14,4 @@
   )
 )
 
-(deep-reverse (list (list 1 2) (list 3 4)))
-
 (#%provide deep-reverse)
