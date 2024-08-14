@@ -6,12 +6,15 @@
   (tree-map square tree))
 
 (define (tree-map proc tree) 
-(cond 
-    ((null? tree) '())
-    ((pair? tree)
-      (map square-tree-map ele))
-    (else (square ele))
+  (define (tree-proc-map tree)
+    (cond 
+      ((null? tree) '())
+      ((pair? tree)
+        (map tree-proc-map tree))
+      (else (proc tree))
+    ) 
   )
+  (tree-proc-map tree)
 )
 
 (#%provide square-tree)
