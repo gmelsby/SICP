@@ -35,4 +35,4 @@
   )
 )
 
-(#%provide union-set, set-equals?)
+(#%provide union-set set-equals?)
