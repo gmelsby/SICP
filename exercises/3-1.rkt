@@ -11,5 +11,3 @@
 (A 10)
 (A 0)
 (A 56)
-
-(#%provide make-accumulator)
