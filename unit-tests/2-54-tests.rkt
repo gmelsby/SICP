@@ -1,6 +1,6 @@
 #lang sicp
 
-(#%require rackunit "../exercises/2-59.rkt")
+(#%require rackunit "../exercises/2-54.rkt")
 
 
 (check-equal? (r-equal? '() '()) #t "empty list r-equal?")
